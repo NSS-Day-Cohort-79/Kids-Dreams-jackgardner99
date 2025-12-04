@@ -35,10 +35,14 @@ Make sure your Developer Tools are open at all times while working on this proje
 Before you click the "Complete Assessment" button on the Learning Platform, add your answers below each question and make a commit.
 
 1. When a child is clicked on in the browser, which module contains the code that will execute on that event happening? Can you explain the algorithm of that logic?
-   > Your answer here
+   > The Kids.js module contains the event listener code. The Kids.js module is the same module with the appended HTML with added "dataset" attributes, so it's easier to navigate and find the correct data to target in the module when adding the EventListener and setting it's intended target. 
+
 2. In the **Pairings** module, why must the `findCelebrityMatch()` function be invoked inside the `for..of` loop that iterates the kids array?
-   > Your answer here
+   > It's invoked because you want to throw in one 'kid' object of the kids array as one of the arguments instead of the entire kids array. You then want to use the celebrities array as the second argument to iterate in the function that you invoked to return a celebrity object, with a matching id to the kid's id property to be displayed in the appended HTML.
+
 3. In the **CelebrityList** module, can you describe how the name of the sport that the celebrity plays can be displayed in the window alert text?
-   > Your answer here
+   > I added an EventListener to the CelebrityList module to run a callback function to trigger a window alert displaying the sport the clicked on celebrity plays. In that function is a series of nesting if statements and a for...of loop that iterates the celebrities array to match one celebrity's id property to the DOM property of the celebrity clicked in the browser. When it finds the match, it pops up an alert in the browser.
+
 4. Can you describe, in detail, the algorithm that is in the `main` module?
-   > Your answer here
+   > In the main.js module, we are importing and invoking three functions that have  HTML return values in the value of the applicationHTML variable with more HTML elements written out. We are then grabbing the id of the `<main>` element in the index.html with `document.querySelector` method, setting it as the value of the mainContainer variable. Finally we are setting it's innerHTML equal to the applicationHTML variable to append the index with the html we created from the three functions in the other modules to display in the DOM.
+
